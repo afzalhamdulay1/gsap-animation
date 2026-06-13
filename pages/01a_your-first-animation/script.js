@@ -9,12 +9,5 @@ gsap.to(".card", {
       yoyo: true,
       duration: 0.5,
     });
-
-    gsap.to(".card", {
-      boxShadow: "0 20px 80px rgba(29, 209, 161, 0.6",
-      repeat: -1,
-      duration: 0.5,
-      yoyo: true,
-    });
   },
 });

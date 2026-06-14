@@ -1,0 +1,24 @@
+.btn {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.toast {
+  height: 50px;
+  width: 200px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 10px;
+}
+
+.card {
+  height: 200px;
+  width: 300px;
+  background-color: #fff;
+
+  border-radius: 10px;
+}

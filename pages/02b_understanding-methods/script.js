@@ -9,22 +9,13 @@ const repeat = document.querySelector(".repeat");
 const kill = document.querySelector(".kill");
 const yoyo = document.querySelector(".yoyo");
 
-let animation;
-
-function initAnimation() {
-  if (animation) animation.kill(); // Kill the old animation to avoid memory leaks/conflicts
-
-  animation = gsap.to(".box", {
-    opacity: 1,
-    rotate: 360,
-    borderRadius: "50%",
-    scale: 1.25,
-    duration: 3,
-    paused: true, // Keep it paused initially if needed
-  });
-}
-
-initAnimation();
+const animation = gsap.to(".box", {
+  opacity: 1,
+  rotate: 360,
+  borderRadius: "50%",
+  scale: 1.25,
+  duration: 3,
+});
 
 play.addEventListener("click", () => {
   animation.play();
@@ -40,7 +31,6 @@ resume.addEventListener("click", () => {
 });
 
 restart.addEventListener("click", () => {
-  initAnimation();
   animation.restart();
 });
 

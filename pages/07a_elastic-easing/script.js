@@ -48,12 +48,11 @@ function renderChart() {
     wrapper.appendChild(label);
     chart.appendChild(wrapper);
 
-    // 👇 This is where GSAP animation will go later
     gsap.to(bar, {
       scaleY: 1,
       duration: 2,
       ease: "elastic.out(1, 0.4)",
-      delay: i * 0.1,
+      delay: i * 0.15,
     });
   });
 }

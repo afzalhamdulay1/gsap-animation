@@ -1,3 +1,5 @@
+import gsap from "gsap";
+
 // Select the main floating action button (FAB)
 const fab = document.querySelector(".fab");
 
@@ -29,11 +31,30 @@ fab.addEventListener("click", () => {
       const x = Math.cos(angle) * radius;
       const y = -Math.sin(angle) * radius;
 
-      // 🔜 Animation will go here
+      gsap.to(child, {
+        x: x,
+        y: y,
+        opacity: 1,
+        scale: 0.8,
+        rotate: 720,
+        duration: 0.5,
+        ease: "expo.out",
+        delay: i * 0.1,
+        pointerEvents: "auto",
+      });
     });
   } else {
     children.forEach((child) => {
-      // 🔜 Collapse animation will go here
+      gsap.to(child, {
+        x: 0,
+        y: 0,
+        opacity: 0,
+        scale: 0.2,
+        rotate: 0,
+        duration: 0.3,
+        ease: "expo.in",
+        pointerEvents: "none",
+      });
     });
   }
 });
